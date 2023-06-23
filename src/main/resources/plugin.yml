@@ -1,0 +1,9 @@
+name: SkinDetector
+version: 4.2.0
+main: org.xinepeng.Plugins
+author: xinepeng
+
+commands:
+  description: SkinDetector
+  usage: /skindetect <player>
+  permission: xinepeng.skin
