@@ -21,10 +21,9 @@ public class SkinRequest {
         String response2 = scanner2.hasNext() ? scanner2.next() : "";
         scanner2.close();
         String skin = parser.parse(response2).getAsJsonObject().get("properties").getAsJsonArray().get(0).getAsJsonObject().get("value").getAsString();
-        byte decoder[] = Base64.getDecoder().decode(skin);
+        byte[] decoder = Base64.getDecoder().decode(skin);
         String skin2 = new String(decoder);
-        String skin3 = parser.parse(skin2).getAsJsonObject().get("textures").getAsJsonObject().get("SKIN").getAsJsonObject().get("url").getAsString();
-        return skin3;
+        return parser.parse(skin2).getAsJsonObject().get("textures").getAsJsonObject().get("SKIN").getAsJsonObject().get("url").getAsString();
     }
 
 }
